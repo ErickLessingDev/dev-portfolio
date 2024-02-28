@@ -50,9 +50,9 @@ const Projects = () => {
       {/* Render project cards */}
       <Slider {...settings} className="flex justify-center align-center rounded-lg focus:outline-none">
         {MyProjects.map((project, index) => (
-          <div key={index} className="flex flex-col justify-center items-center bg-white p-6 md:rounded-lg md:shadow-md md:block-shadow m-4 max-w-md max-h-md">
+          <div key={index} className="flex flex-col justify-center items-center bg-white p-6 md:rounded-lg md:shadow-md md:block-shadow m-4 max-w-md max-h-md" style={{height: '500px'}}>
             <h2 className="text-xl font-semibold text-gray-600">{project.title}</h2>
-            <Image src={project.src} alt={project.title} className="w-full my-4 rounded-lg border border-orange-400" />
+            <Image width={400} height={190} src={project.src} alt={project.title} className="my-4 rounded-lg border border-orange-400" />
             <p className="text-gray-600 mb-4">{project.text}</p>
             <div className="flex flex-wrap gap-2 my-2">
               {project.techstack.map((tech, idx) => (

@@ -49,24 +49,12 @@ export const MyProjects = [
     title: "Pokedex Website",
     text: "A simple website that fetches and displays pokemon data from an API. The website is built using React and TailwindCSS. The website is hosted on Vercel.",
     src: "/pokedex.png",
-    techstack: ["CSS", "React", "Javascript", "TailwindCSS", "Node.js"],
+    techstack: ["CSS", "React", "Javascript", "TailwindCSS", "Node.js", "Vercel"],
   },
   {
-    title: "Pokedex Website",
-    text: "A simple website that fetches and displays pokemon data from an API. The website is built using React and TailwindCSS. The website is hosted on Vercel.",
-    src: "/pokedex.png",
-    techstack: ["CSS", "React", "Javascript", "TailwindCSS", "Node.js"],
-  },
-  {
-    title: "Pokedex Website",
-    text: "A simple website that fetches and displays pokemon data from an API. The website is built using React and TailwindCSS. The website is hosted on Vercel.",
-    src: "/pokedex.png",
-    techstack: ["CSS", "React", "Javascript", "TailwindCSS", "Node.js"],
-  },
-  {
-    title: "Pokedex Website",
-    text: "A simple website that fetches and displays pokemon data from an API. The website is built using React and TailwindCSS. The website is hosted on Vercel.",
-    src: "/pokedex.png",
-    techstack: ["CSS", "React", "Javascript", "TailwindCSS", "Node.js"],
-  },
+    title: "Agri Aid",
+    text: "A WIP ruby on rails application to keep track of cattle, their weight, location and health. The application is designed to help farmers make informed decisions.",
+    src: "/agriaid.png",
+    techstack: ["Ruby", "Postgres", "TailwindCSS", "Rails", "Sidekiq", "Vercel"],
+  }
 ];
