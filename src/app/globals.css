@@ -1,33 +1,134 @@
+@import "keep-react/css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@400..700&display=swap');
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* background-image: url('/images/dev-background.jpg'); */
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #313C43;
+  /* font-family: 'Nunito', sans-serif; */
+  overflow: x-hidden;
+  scroll-behavior: smooth;
+  /* cursor: none; */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.anta-regular {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kode-mono-400 {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.kode-mono-700 {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Define the text-shadow effect */
+.text-shadow {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.svg-shadow {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Apply the text-shadow effect on hover */
+.svg-shadow:hover {
+  filter: drop-shadow(2px 2px 4px rgba(234, 144, 16, 1));
+}
+
+.block-shadow {
+  filter: drop-shadow(2px 2px 4px rgba(234, 144, 16, 1));
+}
+
+/* SCROLLBAR CSS */
+::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FB923C; 
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F97316; 
+}
+
+
+/* SLIDER CSS */
+.custom-slider .slick-slide {
+  margin: 0 10px; /* Adjust the value to control the gap */
+}
+
+/* Customizing dot colors */
+.custom-slider .slick-dots li button:before {
+  color: #FB923C; /* Change to your desired color */
+  cursor: none;
+}
+
+/* Customizing arrow colors */
+.custom-slider .slick-prev:before,
+.custom-slider .slick-next:before {
+  color: #FB923C; /* Change to your desired color */
+  cursor: none;
+}
+
+/* Customizing active dot color */
+.custom-slider .slick-dots li.slick-active button:before {
+  color: #FB923C; /* Change to your desired color */
+  cursor: none;
+}
+
+/* Customizing slide content width and alignment */
+.custom-slider .slick-slide-content {
+  width: 80%; /* Change to your desired width (e.g., 80%) */
+  margin: 0 auto; /* Center the content horizontally */
+  margin-bottom: 20px; /* Adjust the margin-bottom as needed */
+}
+
+/* Adjusting dot height and margin */
+.custom-slider .slick-dots li button {
+  line-height: 10px; /* Adjust the line-height as needed */
+  margin-top: 0; /* Remove top margin */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Centering cards with arrows */
+.custom-slider .slick-prev,
+.custom-slider .slick-next {
+  top: 50%; /* Align arrows vertically */
+}
+
+.custom-slider .slick-prev {
+  margin-left: -50px; /* Adjust the margin-left as needed */
+}
+
+.custom-slider .slick-next {
+  margin-right: -50px; /* Adjust the margin-right as needed */
+}
+
+.custom-slider .slick-track {
+  height: min-content;
 }

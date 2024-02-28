@@ -1,0 +1,33 @@
+
+.customCursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(234, 144, 16, 1); /* Orange color */
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(234, 144, 16, 1), 0 0 40px rgba(234, 144, 16, 1), 0 0 60px rgba(234, 144, 16, 1); /* Glow effect */
+    z-index: 9999; /* Ensure it's above other elements */
+}
+
+.customCursor::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffb25f; /* Glow color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.customCursor:hover::after {
+    opacity: 1; 
+}
+
+.customCursor.cursor-pointer::after {
+    opacity: 1; 
+    background-color: #ffef5f; /* Change to your desired color */
+}
