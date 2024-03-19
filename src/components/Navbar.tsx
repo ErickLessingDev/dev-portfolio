@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({
             </button>
             <div className={`md:hidden absolute top-14 right-0 bg-gray-800 p-2 dropdown ${showLinks ? 'open' : 'closed'}`} ref={dropdownRef}>
               {/* Dropdown Menu */}
-              <div className="button-wrapper">
+              <div className="button-wrapper" style={{zIndex: '20'}}>
                 <button onClick={() => navigate(scrollToHero)} className="block w-full py-4 px-4 text-sm text-left text-orange-400 hover:bg-gray-700 hover:text-white">Skills</button>
                 <button onClick={() => navigate(scrollToTimeline)} className="block w-full py-4 px-4 text-sm text-left text-orange-400 hover:bg-gray-700 hover:text-white">History</button>
                 <button onClick={() => navigate(scrollToProjects)} className="block w-full py-4 px-4 text-sm text-left text-orange-400 hover:bg-gray-700 hover:text-white">Projects</button>
