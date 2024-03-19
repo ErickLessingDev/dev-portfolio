@@ -39,7 +39,7 @@ const ContactForm: React.FC = () => {
     };
 
     return (
-        <div className='flex flex-col items-center w-full'>
+        <div className='flex flex-col items-center w-full pb-4'>
          <form ref={formRef} onSubmit={sendEmail} className="bg-white rounded p-4 px-8 w-[80%] md:w-[40%] mx-auto block-shadow">
             <h1 className='text-3xl kode-mono-700 text-center text-gray-600 my-4'>Contact Me</h1>
             <div className="mb-4">
@@ -54,8 +54,8 @@ const ContactForm: React.FC = () => {
                 <label htmlFor="message" className="block select-none text-gray-600 font-semibold ml-1 mb-1">Message</label>
                 <textarea id="message" name="message" className="block p-1 w-full border-gray-300 rounded-md border border-orange-400 focus:outline-none" required />
             </div>
-            <div className='flex w-full justify-center'>
-                <button type="submit" className="bg-gray-700 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none" disabled={isSubmitting}>
+            <div className='flex w-full justify-center '>
+                <button type="submit" className="bg-gray-700 hover:bg-orange-500 text-white font-bold py-2 px-8 my-4 md:px-16 rounded focus:outline-none" disabled={isSubmitting}>
                     {isSubmitting ? 'Sending...' : 'Send'}
                 </button>
             </div>

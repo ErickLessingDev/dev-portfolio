@@ -75,7 +75,7 @@ const TechStack = () => {
   ];
 
   return (
-    <div className={`grid ${isMobile ? "grid-cols-3" : "grid-cols-4"} gap-5 w-full justify-items-center items-center md:mt-16 lg:mt-28`}>
+    <div className={`grid ${isMobile ? "grid-cols-3" : "grid-cols-4"} gap-8 md:gap-5 w-full justify-items-center items-center mt-8`}>
       {iconList.map((Icon, index) => (
         <Icon key={index} color="white" size={isMobile ? 50 : 80} className="svg-shadow" />
       ))}

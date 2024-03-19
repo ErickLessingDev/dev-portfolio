@@ -6,7 +6,7 @@ import { Tag } from "keep-react";
 
 const TimelineComponent = () => {
   return (
-    <div className='w-[80%] md:w-[50%] bg-white p-4 md:px-8 md:py-4 block-shadow rounded'>
+    <div className='w-[90%] md:w-[50%] bg-white p-4 md:px-8 md:py-4 block-shadow rounded'>
       <h1 className='text-3xl font-bold text-center text-gray-600 my-4 kode-mono-700'>Professional Experience</h1>
         <Timeline className='p-4'>
         {WorkExperience.map((experience, index) => (

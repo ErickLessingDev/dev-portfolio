@@ -132,3 +132,111 @@ body {
 .custom-slider .slick-track {
   height: min-content;
 }
+
+/* Twirl Animation for hamburger */
+@keyframes twirl {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes anti-twirl {
+  0% {
+    transform: rotate(360deg);
+  }
+  25% {
+    transform: rotate(270deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.twirl {
+  animation: twirl 0.5s ease forwards;
+}
+
+.anti-twirl {
+  animation: anti-twirl 0.5s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 250px; /* Adjust the max height as needed */
+  }
+}
+
+@keyframes slideUp {
+  from {
+    max-height: 250px; /* Adjust the max height as needed */
+  }
+  to {
+    max-height: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.dropdown {
+  overflow: hidden;
+}
+
+.dropdown.open {
+  animation: slideDown 0.5s ease forwards;
+}
+
+.dropdown.closed {
+  animation: slideUp 0.5s ease forwards;
+}
+
+.dropdown.open .button-wrapper {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.dropdown.closed .button-wrapper {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+.section {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section.active {
+  opacity: 1;
+}
