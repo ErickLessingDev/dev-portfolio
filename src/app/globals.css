@@ -85,6 +85,11 @@ body {
 
 .slick-slide > div > div {
   height: 485px;
+  width: 400px;
+}
+
+.slick-slide > div > Image {
+  align-self: center;
 }
 
 /* Twirl Animation for hamburger */

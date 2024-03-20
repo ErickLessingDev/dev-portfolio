@@ -26,7 +26,7 @@ const Projects = () => {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -36,16 +36,19 @@ const Projects = () => {
   };
 
   return (
-    <div className='w-[90%] md:w-[80%] p-4 md:px-8 md:py-4 max-h-xs' >
+    <div className='w-[90%] md:w-[90%] p-4 md:px-8 md:py-4 max-h-xs' >
       <h1 className='text-3xl text-center text-orange-400 my-4 kode-mono-700 mb-8'>Github Projects</h1>
       
       {/* Render project cards */}
       <Slider {...settings} className="">
         {MyProjects.map((project, index) => (
           <div key={index} className="flex flex-col justify-center items-center bg-white p-4 rounded-lg md:shadow-md md:block-shadow w-full" style={{maxHeight: '500px', minHeight: '500px', height: '500px'}} >
-            <h2 className="text-xl font-semibold text-gray-600">{project.title}</h2>
-            <Image width={400} height={190} src={project.src} alt={project.title} className="my-4 rounded-lg border border-orange-400" />
-            <div className="flex flex-wrap gap-2 my-2">
+            <h2 className="text-xl text-center font-semibold text-gray-600">{project.title}</h2>
+            <div className='w-full flex justify-center items-center'>
+              <Image width={400} height={190} src={project.src} alt={project.title} className="my-4 rounded-lg border border-orange-400" />
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-2 my-2">
               {project.techstack.map((tech, idx) => (
                 <span key={idx} className="bg-orange-200 text-gray-700 border-orange-300 text-xs md:text-sm py-0 px-3 rounded-full">{tech}</span>
               ))}
