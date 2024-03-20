@@ -60,9 +60,9 @@ const Navbar: React.FC<NavbarProps> = ({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
             </button>
-            <div className={`md:hidden absolute top-14 right-0 bg-gray-800 p-2 dropdown ${showLinks ? 'open' : 'closed'}`} ref={dropdownRef}>
+            <div className={`md:hidden absolute top-14 right-0 bg-gray-800 p-2 dropdown ${showLinks ? 'open' : 'closed'}`} ref={dropdownRef} style={{zIndex: '2'}}>
               {/* Dropdown Menu */}
-              <div className="button-wrapper" style={{zIndex: '20'}}>
+              <div className="button-wrapper">
                 <button onClick={() => navigate(scrollToHero)} className="block w-full py-4 px-4 text-sm text-left text-orange-400 hover:bg-gray-700 hover:text-white">Skills</button>
                 <button onClick={() => navigate(scrollToTimeline)} className="block w-full py-4 px-4 text-sm text-left text-orange-400 hover:bg-gray-700 hover:text-white">History</button>
                 <button onClick={() => navigate(scrollToProjects)} className="block w-full py-4 px-4 text-sm text-left text-orange-400 hover:bg-gray-700 hover:text-white">Projects</button>
