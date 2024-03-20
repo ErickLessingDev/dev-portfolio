@@ -80,12 +80,11 @@ body {
 /* SLIDER CSS */
 .slick-slide > div {
   margin: 0 10px;
-  height: 500px;
 }
 
 .slick-slide > div > div {
-  height: 485px;
   width: 400px;
+  height: 495px;
 }
 
 .slick-slide > div > Image {

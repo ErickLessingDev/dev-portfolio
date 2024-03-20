@@ -42,7 +42,7 @@ const Projects = () => {
       {/* Render project cards */}
       <Slider {...settings} className="">
         {MyProjects.map((project, index) => (
-          <div key={index} className="flex flex-col justify-center items-center bg-white p-4 rounded-lg md:shadow-md md:block-shadow w-full" style={{maxHeight: '500px', minHeight: '500px', height: '500px'}} >
+          <div key={index} className="flex flex-col justify-center items-center bg-white p-4 pb-8 rounded-lg md:shadow-md md:block-shadow w-full" >
             <h2 className="text-xl text-center font-semibold text-gray-600">{project.title}</h2>
             <div className='w-full flex justify-center items-center'>
               <Image width={400} height={190} src={project.src} alt={project.title} className="my-4 rounded-lg border border-orange-400" />
@@ -53,17 +53,17 @@ const Projects = () => {
                 <span key={idx} className="bg-orange-200 text-gray-700 border-orange-300 text-xs md:text-sm py-0 px-3 rounded-full">{tech}</span>
               ))}
             </div>
-            <p className="text-gray-600 mb-4">{project.text}</p>
-            <div className='flex flex-row justify-between gap-2'>
+            <p className="text-gray-600 mb-2 md:mb-4">{project.text}</p>
+            <div className='flex flex-row justify-between items-center gap-2'>
               {
                 (project.demo) && 
-                <button className='rounded-xl border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white px-4 py-2 flex' onClick={() => window.open(project?.demo, "_blank")}>
+                <button className='rounded-xl border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white px-2 py-1 md:px-4 md:py-2' onClick={() => window.open(project?.demo, "_blank")}>
                   Demo
                 </button>
               }
               {
                 (project.github) && 
-                <button className='rounded-xl border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white px-4 py-2 flex' onClick={() => window.open(project?.github, "_blank")}>
+                <button className='rounded-xl border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white px-2 py-1 md:px-4 md:py-2' onClick={() => window.open(project?.github, "_blank")}>
                   Github
                 </button>
               }
