@@ -101,17 +101,17 @@ export default function Home() {
         </div>
       </div>
       <div ref={timelineRef}>
-        <motion.div className='w-[100%] flex justify-center items-center mb-16 md:mb-32' ref={ref2} animate={controls2} initial={fadeOut} style={{ opacity: 0 }}>
+        <motion.div className='w-[100%] flex justify-center items-center mb-8 md:mb-16' ref={ref2} animate={controls2} initial={fadeOut} style={{ opacity: 0 }}>
           <Timeline />
         </motion.div>
       </div>
       <div ref={projectsRef}>
-        <motion.div className='w-[100%] flex justify-center items-center mb-16 md:mb-32'  ref={ref3} animate={controls3} initial={fadeOut} style={{ opacity: 0 }}>
+        <motion.div className='w-[100%] flex justify-center items-center mb-8 md:mb-16'  ref={ref3} animate={controls3} initial={fadeOut} style={{ opacity: 0 }}>
           <Projects />
         </motion.div>
       </div>
       <div ref={contactFormRef}>
-        <motion.div className='w-[100%] flex justify-center items-center mb-16 md:mb-32' ref={ref4} animate={controls4} initial={fadeOut} style={{ opacity: 0 }}>
+        <motion.div className='w-[100%] flex justify-center items-center mb-8 md:mb-16' ref={ref4} animate={controls4} initial={fadeOut} style={{ opacity: 0 }}>
           <ContactForm />
         </motion.div>
       </div>

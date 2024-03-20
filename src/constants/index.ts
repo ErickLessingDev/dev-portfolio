@@ -50,6 +50,8 @@ export const MyProjects = [
     text: "A simple website that fetches and displays pokemon data from an API. The website is built using React and TailwindCSS. The website is hosted on Vercel.",
     src: "/pokedex.png",
     techstack: ["CSS", "React", "Javascript", "TailwindCSS", "Node.js", "Vercel"],
+    github: "https://github.com/ErickLessingDev/my_pokedex",
+    demo: "https://pokedex-theta-azure-43.vercel.app/"
   },
   {
     title: "Agri Aid",

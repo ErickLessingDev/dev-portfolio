@@ -78,59 +78,13 @@ body {
 
 
 /* SLIDER CSS */
-.custom-slider .slick-slide {
-  margin: 0 10px; /* Adjust the value to control the gap */
+.slick-slide > div {
+  margin: 0 10px;
+  height: 500px;
 }
 
-/* Customizing dot colors */
-.custom-slider .slick-dots li button:before {
-  color: #FB923C; /* Change to your desired color */
-  cursor: none;
-}
-
-/* Customizing arrow colors */
-.custom-slider .slick-prev:before,
-.custom-slider .slick-next:before {
-  color: #FB923C; /* Change to your desired color */
-  cursor: none;
-}
-
-/* Customizing active dot color */
-.custom-slider .slick-dots li.slick-active button:before {
-  color: #FB923C; /* Change to your desired color */
-  cursor: none;
-}
-
-/* Customizing slide content width and alignment */
-.custom-slider .slick-slide-content {
-  width: 80%; /* Change to your desired width (e.g., 80%) */
-  margin: 0 auto; /* Center the content horizontally */
-  margin-bottom: 20px; /* Adjust the margin-bottom as needed */
-}
-
-/* Adjusting dot height and margin */
-.custom-slider .slick-dots li button {
-  line-height: 10px; /* Adjust the line-height as needed */
-  margin-top: 0; /* Remove top margin */
-  margin-bottom: 0; /* Remove bottom margin */
-}
-
-/* Centering cards with arrows */
-.custom-slider .slick-prev,
-.custom-slider .slick-next {
-  top: 50%; /* Align arrows vertically */
-}
-
-.custom-slider .slick-prev {
-  margin-left: -50px; /* Adjust the margin-left as needed */
-}
-
-.custom-slider .slick-next {
-  margin-right: -50px; /* Adjust the margin-right as needed */
-}
-
-.custom-slider .slick-track {
-  height: min-content;
+.slick-slide > div > div {
+  height: 485px;
 }
 
 /* Twirl Animation for hamburger */

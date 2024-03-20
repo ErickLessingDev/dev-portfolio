@@ -5,11 +5,13 @@ import Slider from "react-slick";
 import Image from 'next/image';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { GithubOriginal } from 'devicons-react';
+
 
 const Projects = () => {
   // Configuration for react-slick carousel
   var settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 3,
@@ -21,16 +23,6 @@ const Projects = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2
         }
       },
       {
@@ -45,19 +37,33 @@ const Projects = () => {
 
   return (
     <div className='w-[90%] md:w-[80%] p-4 md:px-8 md:py-4 max-h-xs' >
-      <h1 className='text-3xl text-center text-orange-400 my-4 kode-mono-700'>Github Projects</h1>
+      <h1 className='text-3xl text-center text-orange-400 my-4 kode-mono-700 mb-8'>Github Projects</h1>
       
       {/* Render project cards */}
-      <Slider {...settings} className="flex justify-center align-center rounded-lg focus:outline-none">
+      <Slider {...settings} className="">
         {MyProjects.map((project, index) => (
-          <div key={index} className="flex flex-col justify-center items-center bg-white p-6 md:rounded-lg md:shadow-md md:block-shadow m-4 max-w-md max-h-md" style={{height: '500px'}}>
+          <div key={index} className="flex flex-col justify-center items-center bg-white p-4 rounded-lg md:shadow-md md:block-shadow w-full" style={{maxHeight: '500px', minHeight: '500px', height: '500px'}} >
             <h2 className="text-xl font-semibold text-gray-600">{project.title}</h2>
             <Image width={400} height={190} src={project.src} alt={project.title} className="my-4 rounded-lg border border-orange-400" />
-            <p className="text-gray-600 mb-4">{project.text}</p>
             <div className="flex flex-wrap gap-2 my-2">
               {project.techstack.map((tech, idx) => (
                 <span key={idx} className="bg-orange-200 text-gray-700 border-orange-300 text-xs md:text-sm py-0 px-3 rounded-full">{tech}</span>
               ))}
+            </div>
+            <p className="text-gray-600 mb-4">{project.text}</p>
+            <div className='flex flex-row justify-between gap-2'>
+              {
+                (project.demo) && 
+                <button className='rounded-xl border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white px-4 py-2 flex' onClick={() => window.open(project?.demo, "_blank")}>
+                  Demo
+                </button>
+              }
+              {
+                (project.github) && 
+                <button className='rounded-xl border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white px-4 py-2 flex' onClick={() => window.open(project?.github, "_blank")}>
+                  Github
+                </button>
+              }
             </div>
           </div>
         ))}
