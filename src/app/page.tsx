@@ -59,6 +59,10 @@ export default function Home() {
 
   // Attach scroll animations to each section
   useEffect(() => {
+    triggerAnimation(controls5, inView5);
+  }, [inView5]);
+
+  useEffect(() => {
     triggerAnimation(controls1, inView1);
   }, [inView1]);
 
@@ -74,9 +78,7 @@ export default function Home() {
     triggerAnimation(controls4, inView4);
   }, [inView4]);
 
-  useEffect(() => {
-    triggerAnimation(controls5, inView5);
-  }, [inView5]);
+
 
 
   return (
@@ -90,7 +92,7 @@ export default function Home() {
       />
       <div className="flex md:mt-8 flex-col md:flex-row w-full h-full justify-center items-center">
         <div className='w-[100%] md:w-[50%] mx-auto'>
-          <motion.div ref={ref1} animate={controls1} initial={fadeOut} style={{ opacity: 0 }}>
+          <motion.div ref={ref5} animate={controls5} initial={fadeOut} style={{ opacity: 0 }}>
             <Hero />
           </motion.div>
         </div>
