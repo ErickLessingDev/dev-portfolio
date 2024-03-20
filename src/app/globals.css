@@ -79,12 +79,13 @@ body {
 
 /* SLIDER CSS */
 .slick-slide > div {
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 
 .slick-slide > div > div {
   width: 400px;
   height: 495px;
+  filter: drop-shadow(2px 2px 4px rgba(234, 144, 16, 1));
 }
 
 .slick-slide > div > Image {
